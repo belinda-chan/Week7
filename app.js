@@ -2,6 +2,9 @@ let mongoose = require('mongoose');
 let express = require('express');
 let app = express();
 let mongodb = require ('mongodb');
+//
+const MongoClient = mongodb.MongoClient;
+const url = "mongodb://" + process.argv[2] + ":27017/";
 
 let bodyParser=require('body-parser'); //needed as the middleware for the post request
 app.use(bodyParser.urlencoded({extended:false}));
